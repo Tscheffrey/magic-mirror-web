@@ -124,7 +124,8 @@ class MagicMirror extends React.Component {
   }
 
   toggleEditMode(e){
-    this.setState({editMode:!this.state.editMode})
+    if(this.state.editMode) this.unsetEditMode(e)
+    else this.setEditMode(e)
   }
 
   setEditMode(e){
@@ -141,6 +142,16 @@ class MagicMirror extends React.Component {
     return id
   }
 
+  onMouseMove(){
+    this.setState({editButtonVisible:true})
+    if(this.mouseMoveTimeout) clearTimeout(this.mouseMoveTimeout)
+    this.mouseMoveTimeout = setTimeout(this.onMouseStandingStill, this.editButtonDelay)
+  }
+
+  onMouseStandingStill(){
+    this.setState({editButtonVisible:false})
+    clearTimeout(this.mouseMoveTimeout)
+  }
 
   renderWidgets(){
     let renderedWidgets = []
@@ -156,20 +167,6 @@ class MagicMirror extends React.Component {
 
     return renderedWidgets
   }
-
-  onMouseMove(){
-    this.setState({editButtonVisible:true})
-    if(this.mouseMoveTimeout) clearTimeout(this.mouseMoveTimeout)
-    this.mouseMoveTimeout = setTimeout(this.onMouseStandingStill, this.editButtonDelay)
-    console.log('move')
-  }
-
-  onMouseStandingStill(){
-    this.setState({editButtonVisible:false})
-    clearTimeout(this.mouseMoveTimeout)
-    console.log('mouse not moved')
-  }
-
 
   render(){
     let mainContainerClasses = ['--mm-mainCanvas']

@@ -1,0 +1,33 @@
+.--mm-clock1 {
+
+  $organic-animation: cubic-bezier(.4,2.08,.55,.44);
+
+
+  .--mm-widget-front{
+    .clock-wrapper{
+      padding: 1rem;
+      svg{
+        height: 100%;
+        width: 100%;
+
+        * {
+          transform-origin: 50%;
+        }
+
+        .seconds, .minutes{
+          transition: all 200ms $organic-animation;
+
+
+        }
+        .seconds {
+          //transition: all 1s linear;
+        }
+        .minutes {
+        }
+        .hours {
+          transition: none;
+        }
+      }
+    }
+  }
+}

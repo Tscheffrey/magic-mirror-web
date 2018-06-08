@@ -1,0 +1,8 @@
+*, *:after, *:before {
+  user-select: none;
+  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	//transition: all $base-transition-speed $base-transition-function;
+	position: relative;
+}

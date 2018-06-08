@@ -1,0 +1,36 @@
+// $bgcolor: darken(white,5);
+// $fontcolor: lighten(black,5);
+//
+// body {
+//   color: $fontcolor;
+//   background-color: $bgcolor;
+//   font-family: sans-serif;
+// }
+//
+// input[type='text']{
+//   color: $fontcolor;
+//   background-color: lighten($bgcolor,4);
+//   border: 1px solid darken($fontcolor,4);
+//   //width: 100%;
+//   box-sizing: border-box;
+// }
+//
+// .todoList {
+//   box-sizing: border-box;
+//   width:100%;
+//   max-width: 500px;
+//   margin: 50px auto;
+//   ul {
+//   padding: 0;
+//   margin: 0;
+//   display: block;
+//     li {
+//       display: flex;
+//       padding: 0;
+//       margin: 0;
+//     }
+//   }
+// }
+
+
+@import 'style/magicMirror';

@@ -1,0 +1,116 @@
+/* Fonts importieren */
+@import 'fonts';
+@import 'base';
+
+@mixin setBaseFont(){
+	font-family: 'Montserrat', sans-serif;
+}
+
+@mixin setNumberFont(){
+	font-family: 'Advent Pro', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+
+}
+
+body{
+	font-size: 1.6rem;
+	margin: 0;
+	padding:0;
+	@include setBaseFont();
+}
+
+.--mm-mainCanvas{
+	height: 100vh;
+	width: 100%;
+	top:0;
+	left:0;
+	box-sizing: border-box;
+
+	// background-color: #121212;
+	background-color: rgba(black,1);
+	z-index:0;
+	color: white;
+	position: fixed;
+	// font-family: $base-font;
+	transition: background-color 500ms ease;
+
+ .--mm-editButton{
+		display: block;
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		height: 6rem;
+		width: 6rem;
+		user-select: none;
+		border-radius: 50%;
+		overflow: hidden;
+		cursor: pointer;
+		transform: rotate(0deg);
+		border: none;
+		outline: none;
+		z-index: 120;
+		opacity: 1;
+
+		transition: transform 300ms ease, background-color 300ms ease, opacity 300ms ease;
+
+		background-color: rgba(white,0);
+		background-image: url("/img/ui_add.svg");
+		background-size: contain;
+
+		&:hover{
+			background-color: rgba(white,0.3);
+		}
+
+		&.invisible:not(:hover) {
+			opacity: 0;
+
+		}
+	}
+	&.--mm-editMode{
+		background-color: #1f1f1f;
+		//background-color: #3e3e3e;
+		// background-color: rgba(black,0);
+		// ::before{
+		// 	opacity: 0;
+		// }
+		.--mm-editButton{
+			transform: rotate(45deg);
+		}
+		.--mm-widget{
+			cursor: move;
+			/* box-shadow: 0 0 5rem 1rem rgba(black, 0.4); */
+			&:hover,
+			&.--mm-widget-isBeingDragged{
+				outline-color: rgba(white,1);
+				&:not(.mm-widget-flipped) .--mm-widget-settingsButton.--mm-visible,
+				&:not(.mm-widget-flipped) .--mm-widget-deleteButton.--mm-visible{
+					opacity: 1;
+					pointer-events: auto;
+					transform: scale(1);
+				}
+				.--mm-widget-nameTag{
+					opacity: 1;
+				}
+			}
+			&:active{
+				/* transform: scale(1.1); */
+			}
+		}
+	}
+
+	.--mm-widgetArea {
+		height: 100vh;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		top:0;
+		left: 0;
+		pointer-events: none;
+	}
+
+	@import 'widgetBase';
+}

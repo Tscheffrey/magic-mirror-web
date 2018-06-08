@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="768" viewBox="0 0 768 768">
+  <defs>
+    <radialGradient id="a" data-name="Unbenannter Verlauf 18" cx="384" cy="384" r="384" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4d4d4d"/>
+      <stop offset="1" stop-color="#333"/>
+    </radialGradient>
+  </defs>
+  <title>Zeichenfläche 1 Kopie 2</title>
+  <rect width="768" height="768" style="fill: url(#a)"/>
+</svg>

@@ -1,0 +1,129 @@
+
+
+.--mm-widget{
+	position: absolute;
+	outline: 0.2rem solid rgba(black,0);
+	/* background-color: rgba(white, 0.1); */
+	box-sizing: border-box;
+	transform: scale(1);
+	//transition: transform 100ms ease, outline 200ms ease, box-shadow 500ms ease 100ms;
+	transition: outline 200ms ease;
+	perspective: 50rem;
+	/* box-shadow: 0 0 5rem 1rem rgba(black, 0); */
+	> .--mm-widget-front,
+	> .--mm-widget-back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		backface-visibility: hidden;
+		transition: transform 500ms ease;
+		height: 100%;
+		width:100%;
+		// padding: 0.5rem;
+		box-sizing: border-box;
+	}
+	> .--mm-widget-front {
+		z-index: 2;
+		transform: rotateY(0deg);
+		overflow: hidden;
+		/* background: red; */
+	}
+	> .--mm-widget-back {
+		z-index: 3;
+		transform: rotateY(180deg);
+		//background: #121212;
+		background: #000;
+
+		padding: 1rem;
+		padding-top: 4rem;
+		text-align: left;
+
+	}
+
+	$settings-button-size: 4.5rem;
+
+	.--mm-widget-settingsButton,
+	.--mm-widget-deleteButton {
+		display: block;
+		position: absolute;
+		$settings-button-size : 4.5rem;
+		height: $settings-button-size;
+		width: $settings-button-size;
+		bottom: $settings-button-size / 10;
+
+		background-color: transparent;
+		border: none;
+		outline: none;
+
+		background-size: contain;
+		z-index: 10;
+
+		opacity: 0;
+		pointer-events: none;
+		transform: scale(0.1);
+		//transform: rotate(0deg);
+		transition: transform 200ms ease, opacity 200ms ease;
+
+		//user-select: none;
+		border-radius: 50%;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	.--mm-widget-settingsButton{
+		right: $settings-button-size / 10;
+		background-image: url("/img/ui_settings.svg");
+	}
+
+	.--mm-widget-deleteButton {
+		background-image: url("/img/ui_remove2.svg");
+		left: $settings-button-size / 10;
+	}
+	.--mm-widget-nameTag{
+		@include setBaseFont();
+		text-align: center;
+		display: block;
+		position: absolute;
+		top: 0;
+		transform: translateY(-100%);
+		left: 0;
+		user-select: none;
+		transition: opacity 400ms ease, transform 300ms ease, background-color 400ms ease, left 500ms ease;
+		pointer-events: none;
+		user-select: none;
+		padding: 0.8rem 1.6rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		max-width: 100%;
+		width: 100%;
+		max-height: 100%;
+		box-sizing: border-box;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		//background-color: rgba(black,0.5);
+		z-index: 10;
+		opacity: 0;
+		font-size: 1.5rem;
+		//border-bottom-right-radius: 1rem;
+		//transform: translateX(0);
+	}
+	&.--mm-widget-flipped{
+		> .--mm-widget-front {
+			transform: rotateY(-180deg);
+		}
+		> .--mm-widget-back {
+			transform: rotateY(0deg);
+		}
+		.--mm-widget-nameTag{
+			opacity: 1;
+			transform: translateY(0);
+			//left: 50%;
+			//transform: translateX(-50%);
+			background-color: rgba(black,0);
+		}
+	}
+	&.--mm-widget-isBeingDragged{
+		z-index: 100;
+	}
+	@import 'clockWidget';
+}

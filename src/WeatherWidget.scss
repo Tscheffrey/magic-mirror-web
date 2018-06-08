@@ -1,0 +1,39 @@
+.--mm-weather-widget {
+
+  .--mm-widget-front{
+    > * {
+      width:100%;
+      height: 100%;
+      .temperature {
+        display:block;
+        //width:100%;
+        font-size: 15rem;
+        //padding-top: 2rem;
+        position: absolute;
+        left: 50%;
+        top: -1.5rem;
+        transform: translateX(-50%);
+        //font-family: 'Advent Pro';
+      }
+      .location {
+        display: block;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.5rem 1rem;
+        color:black;
+        background-color: white;
+        border-radius: 2rem;
+        box-sizing:border-box;
+        max-width: 100%;
+        white-space: nowrap;
+        //overflow: hidden;
+        text-overflow: ellipsis;
+
+        //color: rgba(white,0.7);
+        //font-weight: 700;
+      }
+    }
+  }
+}

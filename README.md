@@ -35,7 +35,7 @@ Addionally, a Web Application can easily be packaged in an [Electron](https://gi
 I chose [React](https://github.com/facebook/react) for this purpose.
 
 
-### 2. User configuratable - no direct interactions 👆
+### 2. User configurable - no direct interactions 👆
 
 Because this application's primary purpose is to provide a simple and quick overview of information on amirror (or something similar), the user is not supposed to interact with the GUI. However, it should include an *Edit mode* so the user can add, remove, move, scale and configure apps.
 
@@ -53,7 +53,7 @@ Since I want this thing to be usable behind a spy mirror or on a projector, all 
 
 ## How it works
 
-This project works on the basis of [facebook/create-react-app](https://github.com/facebook/create-react-app).
+This project works on the basis of the awsome [facebook/create-react-app](https://github.com/facebook/create-react-app) project.
 
 
 ### Styling

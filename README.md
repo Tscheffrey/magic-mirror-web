@@ -130,3 +130,4 @@ Most animation and a lot of visibility stuff of the UI elements (maybe a bit too
 - [ ] add more types of settings
 - [ ] clean up SCSS
 - [ ] introduce a side attachment option for widgets and re-calculate their position on window resize
+- [ ] built more of those dope widgets

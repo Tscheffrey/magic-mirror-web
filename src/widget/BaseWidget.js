@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Interact from 'interactjs'
 
-import Setting from './Setting'
-import icon from './img/base-widget-logo.svg'
+import Setting from '../Setting'
+import icon from '../img/base-widget-logo.svg'
 
 
 class BaseWidget extends React.Component {

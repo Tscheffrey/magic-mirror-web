@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import moment from 'moment'
 
 import BaseWidget from './BaseWidget'
-import Setting from './Setting'
+import Setting from '../Setting'
 import './ClockWidget.css'
 
 class ClockWidget extends BaseWidget {

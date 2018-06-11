@@ -3,10 +3,10 @@ import moment from 'moment'
 
 import BaseWidget from './BaseWidget'
 import ClockWidget from './ClockWidget'
-import Setting from './Setting'
+import Setting from '../Setting'
 import './Clock1.css'
 
-import icon from './img/clock-widget-logo.svg'
+import icon from '../img/clock-widget-logo.svg'
 
 class Clock1 extends ClockWidget {
   constructor(props){

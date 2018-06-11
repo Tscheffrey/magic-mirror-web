@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 //import interact from 'interactjs'
 
 import BaseWidget from './BaseWidget'
-import Setting from './Setting'
+import Setting from '../Setting'
 import './WeatherWidget.css'
 
-import icon from './img/weather-widget-logo.svg'
+import icon from '../img/weather-widget-logo.svg'
 
 class WeatherWidget extends BaseWidget {
   constructor(props){
     super(props)
     this.state.url = 'http://api.openweathermap.org/data/2.5/weather'
     this.state.mainContainerClasses.push('--mm-weather-widget')
-    this.state.widgetName = "Weather Widget";
+    this.state.widgetName = "Weather Widget"
     this.state.placement.width = 30
     this.state.placement.height = 20
     this.requestState = 'none'
@@ -25,15 +25,15 @@ class WeatherWidget extends BaseWidget {
   static widgetName = 'Temperature'
 
   componentDidMount(){
-    super.componentDidMount();
-    this.startTimer();
+    super.componentDidMount()
+    this.startTimer()
   }
 
   componentWillUnmount(){
     if(this.timeout){
-      clearTimeout(this.timeout);
+      clearTimeout(this.timeout)
     }
-    this.timeout = undefined;
+    this.timeout = undefined
   }
 
   startTimer(){
@@ -97,7 +97,7 @@ class WeatherWidget extends BaseWidget {
     let temperature = !!this.state.response ? Math.round(this.state.response.main.temp) + '°' : '';
     let location = !!this.state.response ? this.state.response.name + ', ' +  this.state.response.sys.country : this.state.settings.location.value;
 
-    let locationTag;
+    let locationTag
     if(location) locationTag = <span className="location">{location}</span>
 
     return (

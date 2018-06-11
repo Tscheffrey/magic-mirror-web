@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import moment from 'moment'
 
 import BaseWidget from './BaseWidget'
-import Setting from './Setting'
+import Setting from '../Setting'
 import { Bar,  BarChart, LineChart, ComposedChart, Legend, CartesianGrid, CartesianAxis, Line, ReferenceLine, ResponsiveContainer, XAxis, AreaChart, Area, YAxis, Label, LabelList } from 'recharts'
 import './WeatherChart.css'
 
-import icon from './img/weather-chart-logo.svg'
+import icon from '../img/weather-chart-logo.svg'
 
 class WeatherChart extends BaseWidget {
   constructor(props){

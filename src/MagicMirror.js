@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import './MagicMirror.css'
 
-import BaseWidget from './BaseWidget'
-import WeatherWidget from './WeatherWidget'
-import ClockWidget from './ClockWidget'
-import WeatherChart from './WeatherChart'
-import Clock1 from './Clock1'
+import BaseWidget from './widget/BaseWidget'
+import WeatherWidget from './widget/WeatherWidget'
+import ClockWidget from './widget/ClockWidget'
+import WeatherChart from './widget/WeatherChart'
+import Clock1 from './widget/Clock1'
 
 import idGenerator from './IdGenerator'
 import storageHandler from './StorageHandler'

@@ -149,7 +149,7 @@ class MagicMirror extends React.Component {
   }
 
   onMouseStandingStill(){
-    this.setState({editButtonVisible:false})
+    if(!this.state.editMode)this.setState({editButtonVisible:false})
     clearTimeout(this.mouseMoveTimeout)
   }
 

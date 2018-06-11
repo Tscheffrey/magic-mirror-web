@@ -1,5 +1,3 @@
-
-
 .--mm-widget{
 	position: absolute;
 	outline: 0.2rem solid rgba(black,0);
@@ -125,5 +123,4 @@
 	&.--mm-widget-isBeingDragged{
 		z-index: 100;
 	}
-	@import 'clockWidget';
 }

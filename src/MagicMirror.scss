@@ -1,26 +1,18 @@
-/* Fonts importieren */
-@import 'fonts';
-@import 'base';
+// import fonts
+@import './style/fonts';
 
-@mixin setBaseFont(){
-	font-family: 'Montserrat', sans-serif;
-}
+// import basic project settings
+@import './style/settings';
 
-@mixin setNumberFont(){
-	font-family: 'Advent Pro', sans-serif;
-}
+// import mixins
+@import './style/mixins';
 
-html {
-  font-size: 62.5%;
+// import basic project files
+@import './style/base';
 
-}
+// import basic widget settings
+@import './style/baseWidget';
 
-body{
-	font-size: 1.6rem;
-	margin: 0;
-	padding:0;
-	@include setBaseFont();
-}
 
 .--mm-mainCanvas{
 	height: 100vh;
@@ -111,6 +103,4 @@ body{
 		left: 0;
 		pointer-events: none;
 	}
-
-	@import 'widgetBase';
 }

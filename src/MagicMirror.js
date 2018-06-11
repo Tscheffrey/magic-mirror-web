@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './style.css'
+import './MagicMirror.css'
 
 import BaseWidget from './BaseWidget'
 import WeatherWidget from './WeatherWidget'

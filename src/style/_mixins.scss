@@ -1,0 +1,9 @@
+// this file includes mixins for later use
+
+@mixin setBaseFont(){
+	font-family: 'Montserrat', sans-serif;
+}
+
+@mixin setNumberFont(){
+	font-family: 'Advent Pro', sans-serif;
+}

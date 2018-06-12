@@ -70,10 +70,12 @@ Most animation and a lot of visibility stuff of the UI elements (maybe a bit too
 
 ### MagicMirror Instance
 
+Widget IDs are generated using [dylang/shortid](https://github.com/dylang/shortid).
+
 *documentation coming soon*
 
 
-### WidgetsWidget Store
+### Widgets
 
 *documentation coming soon*
 

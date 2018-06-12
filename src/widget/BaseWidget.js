@@ -9,9 +9,10 @@ class BaseWidget extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      widgetName: this.constructor.widgetName,
       settingsViewOpen: false,
       cssWidgetPrefix: "baseWidget",
-      widgetName: "Standard Widget",
+      //widgetName: "Standard Widget",
       mainContainerClasses: ['--mm-widget'],
       placement: {
         height: 20,
@@ -20,7 +21,7 @@ class BaseWidget extends React.Component {
         offsetY: 0,
         isBeingDragged: false
       },
-      settings: this.initSettings()
+      settings: this.initSettings(),
     }
     this.toggleSettings = this.toggleSettings.bind(this)
     this.onSettingChange = this.onSettingChange.bind(this)
@@ -155,7 +156,7 @@ class BaseWidget extends React.Component {
 
     if(this.state.editMode) mainContainerClasses.push('--mm-editMode');
 
-    let widgetName = !!this.props.widgetName ? this.props.widgetName : this.state.widgetName;
+    let widgetName = this.state.widgetName
 
     return (
       <div

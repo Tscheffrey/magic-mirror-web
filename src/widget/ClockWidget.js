@@ -9,7 +9,6 @@ class ClockWidget extends BaseWidget {
   constructor(props){
     super(props)
     this.state.mainContainerClasses.push('--mm-clock-widget')
-    this.state.widgetName = "Clock"
     this.state.placement.width = 30
     this.state.placement.height = 8
     this.state.time =  moment()

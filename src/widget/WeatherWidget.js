@@ -12,7 +12,6 @@ class WeatherWidget extends BaseWidget {
     super(props)
     this.state.url = 'http://api.openweathermap.org/data/2.5/weather'
     this.state.mainContainerClasses.push('--mm-weather-widget')
-    this.state.widgetName = "Weather Widget"
     this.state.placement.width = 30
     this.state.placement.height = 20
     this.requestState = 'none'

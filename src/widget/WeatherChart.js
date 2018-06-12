@@ -14,7 +14,6 @@ class WeatherChart extends BaseWidget {
 
     this.state.url = 'http://api.openweathermap.org/data/2.5/forecast/daily'
     this.state.mainContainerClasses.push('--mm-weather-chart')
-    this.state.widgetName = "Weather"
     this.state.placement.width = 60
     this.state.placement.height = 40
     this.state.days = 6

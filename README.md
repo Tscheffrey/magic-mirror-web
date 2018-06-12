@@ -14,7 +14,7 @@ I personally think this looks quite dope. You can find countless different imple
 
 ## Quick Start 🛫
 
-`git clone` this repo
+`git clone https://github.com/Tscheffrey/magic-mirror-web.git`
 
 `npm install` to install dependencies
 

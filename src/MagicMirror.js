@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import './MagicMirror.css'
 
+import Shortid from 'shortid'
+
 import BaseWidget from './widget/BaseWidget'
 import WeatherWidget from './widget/WeatherWidget'
 import ClockWidget from './widget/ClockWidget'
 import WeatherChart from './widget/WeatherChart'
 import Clock1 from './widget/Clock1'
 
-import idGenerator from './IdGenerator'
 import storageHandler from './StorageHandler'
 import WidgetStore from './WidgetStore'
 
@@ -94,7 +95,7 @@ class MagicMirror extends React.Component {
 
   addWidget(widget){
     let widgetList = this.state.widgets
-    let id = this.generateWidgetId()
+    let id = Shortid.generate()
     widgetList[id] = widget
     this.setState(
       {widgets: widgetList},
@@ -134,12 +135,6 @@ class MagicMirror extends React.Component {
 
   unsetEditMode(e){
     this.setState({editMode:false})
-  }
-
-  generateWidgetId(){
-    let id = this.widgetIdCounter
-    this.widgetIdCounter++
-    return id
   }
 
   onMouseMove(){

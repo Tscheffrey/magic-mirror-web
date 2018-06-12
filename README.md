@@ -79,6 +79,9 @@ Widget IDs are generated using [dylang/shortid](https://github.com/dylang/shorti
 
 MagicMirror has a state called *Edit Mode*. It can be invoked by clicking the ➕ sign in the bottom right of the viewport.
 
+![Edit Mode in action](resources/screen-captures/01_edit-mode.gif)
+
+
 In Edit Mode, widgets can be added by clicking one of the Icons in the *WidgetStore* or removed by hovering them and clicking the 🗑 button.
 
 

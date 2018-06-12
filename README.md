@@ -70,9 +70,16 @@ Most animation and a lot of visibility stuff of the UI elements (maybe a bit too
 
 ### MagicMirror Instance
 
+The main part of the application is the MagicMirror object which spans over the entire viewport and manages all widgets within the application
+
 Widget IDs are generated using [dylang/shortid](https://github.com/dylang/shortid).
 
-*documentation coming soon*
+
+### Edit Mode
+
+MagicMirror has a state called *Edit Mode*. It can be invoked by clicking the ➕ sign in the bottom right of the viewport.
+
+In Edit Mode, widgets can be added by clicking one of the Icons in the *WidgetStore* or removed by hovering them and clicking the 🗑 button.
 
 
 ### Widgets
@@ -104,10 +111,6 @@ Widget IDs are generated using [dylang/shortid](https://github.com/dylang/shorti
 
 *documentation coming soon*
 
-
-### Edit Mode
-
-*documentation coming soon*
 
 
 ## Make Your own Widgets

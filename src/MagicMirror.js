@@ -8,6 +8,7 @@ import WeatherWidget from './widget/WeatherWidget'
 import ClockWidget from './widget/ClockWidget'
 import WeatherChart from './widget/WeatherChart'
 import Clock1 from './widget/Clock1'
+import SpaceXWidget from './widget/SpaceXWidget'
 
 import storageHandler from './StorageHandler'
 import WidgetStore from './WidgetStore'
@@ -23,6 +24,7 @@ class MagicMirror extends React.Component {
         ClockWidget,
         WeatherChart,
         WeatherWidget,
+        SpaceXWidget
       ],
       widgets: {}
     }

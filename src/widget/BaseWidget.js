@@ -4,6 +4,8 @@ import Interact from 'interactjs'
 import Setting from '../Setting'
 import icon from '../img/base-widget-logo.svg'
 
+import Confetti from 'react-dom-confetti';
+
 
 class BaseWidget extends React.Component {
   constructor(props){
@@ -22,7 +24,10 @@ class BaseWidget extends React.Component {
         isBeingDragged: false
       },
       settings: this.initSettings(),
+      confetti: false
     }
+    this.displayConfetti = false
+
     this.toggleSettings = this.toggleSettings.bind(this)
     this.onSettingChange = this.onSettingChange.bind(this)
     this.remove = this.remove.bind(this)
@@ -54,6 +59,7 @@ class BaseWidget extends React.Component {
   }
 
   componentDidMount(){
+    this.setState({confetti:true})
     if(this.props.canvasInEditMode) this.initDraggable();
     else this.removeDraggable;
   }
@@ -158,12 +164,25 @@ class BaseWidget extends React.Component {
 
     let widgetName = this.state.widgetName
 
+    let confettiConfig = {
+      angle: 90,
+      spread: 360,
+      startVelocity: 28,
+      elementCount: 72,
+      decay: 0.75
+    }
+
+    let confetti;
+    if(this.displayConfetti) confetti = <Confetti active={ this.state.confetti } config={confettiConfig}/>
+
     return (
       <div
         className={mainContainerClasses.join(' ')}
         style={mainContainerStyle}
         ref={(ref) => { this.domRef = ref }}
         id={'widget' + this.props.id}>
+
+        {confetti}
 
         <div className="--mm-widget-front">
           {this.renderContent()}

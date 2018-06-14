@@ -87,12 +87,10 @@ class SpaceXWidget extends BaseWidget {
             {this.state.response.map((launch) => (
               <li className="launch" key={launch.flight_number}>
                 <span className='name'>{launch.mission_name}</span>
-                <span class="metadata">
+                <span className="metadata">
                   <span className='date'>{this.formatDate(launch.launch_date_utc)}</span>
-                  <span className='site'>{launch.launch_site.site_name}</span>
+                  <span className='site'>from {launch.launch_site.site_name}</span>
                 </span>
-
-
               </li>
             ))}
           </ul>

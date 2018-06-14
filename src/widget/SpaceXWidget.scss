@@ -12,20 +12,26 @@
       background-color: rgba(white, 0.1);
     }
   }
-    .name {
-      display: block;
-      font-size: 2.6rem;
-      font-weight: 500;
+  .metadata {
+    display: flex;
+    //justify-content: space-between;
+  }
+
+  .name {
+    display: block;
+    font-size: 2.6rem;
+    font-weight: 500;
+  }
+  .date,
+  .site
+  {
+    color: rgba(white, 0.6);
+    font-size: 1.5rem;
+  }
+  .date{
+    margin-right: 0.5rem;
+    &:after{
+      //content: ' - ';
     }
-    .date,
-    .site
-    {
-      color:  rgba(white, 0.6);
-      font-size: 1.5rem;
-    }
-    .date{
-      &:after{
-        content: ' - ';
-      }
-    }
+  }
 }

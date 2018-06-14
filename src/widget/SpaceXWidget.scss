@@ -1,24 +1,31 @@
 .spacex-widget {
   .--mm-widget-front{
-    .launches-list {
-
-    }
+    padding: 0.5rem;
+    // .launches-list {
+    //
+    // }
    .launch {
-      margin: 0.5rem 0;
+      margin: 0.8rem 0 0;
       border-radius: 0.5rem;
       overflow: hidden;
-      padding: 0.3rem;
+      padding: 0.8rem;
       background-color: rgba(white, 0.1);
     }
   }
-
-    padding: 0.5rem;
-
     .name {
       display: block;
-      font-size: 3rem;
+      font-size: 2.6rem;
+      font-weight: 500;
     }
-    .date:after {
-      content: ' - ';
+    .date,
+    .site
+    {
+      color:  rgba(white, 0.6);
+      font-size: 1.5rem;
+    }
+    .date{
+      &:after{
+        content: ' - ';
+      }
     }
 }

@@ -14,7 +14,7 @@ class SpaceXWidget extends BaseWidget {
     super(props)
     this.state.url = 'http://api.openweathermap.org/data/2.5/weather'
     this.state.mainContainerClasses.push('spacex-widget')
-    this.state.placement.width = 30
+    this.state.placement.width = 35
     this.state.placement.height = 50
     this.requestState = 'none'
     this.refreshRate = 10 * 60 * 1000
@@ -87,9 +87,10 @@ class SpaceXWidget extends BaseWidget {
             {this.state.response.map((launch) => (
               <li className="launch" key={launch.flight_number}>
                 <span className='name'>{launch.mission_name}</span>
-                <span className='date'>{this.formatDate(launch.launch_date_utc)}</span>
-                <span className='site'>{launch.launch_site.site_name}</span>
-
+                <span class="metadata">
+                  <span className='date'>{this.formatDate(launch.launch_date_utc)}</span>
+                  <span className='site'>{launch.launch_site.site_name}</span>
+                </span>
 
 
               </li>

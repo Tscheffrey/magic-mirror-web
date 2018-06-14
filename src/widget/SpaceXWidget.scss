@@ -1,5 +1,24 @@
 .spacex-widget {
   .--mm-widget-front{
-    
+    .launches-list {
+
+    }
+   .launch {
+      margin: 0.5rem 0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      padding: 0.3rem;
+      background-color: rgba(white, 0.1);
+    }
   }
+
+    padding: 0.5rem;
+
+    .name {
+      display: block;
+      font-size: 3rem;
+    }
+    .date:after {
+      content: ' - ';
+    }
 }

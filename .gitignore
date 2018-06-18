@@ -21,3 +21,6 @@ src/**/*.css
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# API keys etc.
+src/SecretStuff.js

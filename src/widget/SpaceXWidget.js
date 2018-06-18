@@ -9,9 +9,12 @@ import moment from 'moment'
 
 import icon from '../img/spacex-logo.svg'
 
+import Config from '../Config'
+
 class SpaceXWidget extends BaseWidget {
   constructor(props){
     super(props)
+    console.log(Config.test);
     this.state.url = 'http://api.openweathermap.org/data/2.5/weather'
     this.state.mainContainerClasses.push('spacex-widget')
     this.state.placement.width = 35

@@ -14,7 +14,6 @@ import Config from '../Config'
 class SpaceXWidget extends BaseWidget {
   constructor(props){
     super(props)
-    console.log(Config.test);
     this.state.url = 'http://api.openweathermap.org/data/2.5/weather'
     this.state.mainContainerClasses.push('spacex-widget')
     this.state.placement.width = 35
@@ -56,7 +55,6 @@ class SpaceXWidget extends BaseWidget {
       return response.json()
     })
     .then(function(json){
-      console.log(json)
       let newState = self.state
       newState.response = json
       self.setState(newState)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import storageHandler from './StorageHandler'
-//import './App.css';
+//import './App.css'
 
 import MagicMirror from './MagicMirror'
 
@@ -19,4 +19,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

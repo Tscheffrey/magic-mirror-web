@@ -4,12 +4,12 @@ import Interact from 'interactjs'
 import Setting from '../Setting'
 import icon from '../img/base-widget-logo.svg'
 
-import Confetti from 'react-dom-confetti';
+import Confetti from 'react-dom-confetti'
 
 
 class BaseWidget extends React.Component {
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       widgetName: this.constructor.widgetName,
       settingsViewOpen: false,
@@ -60,19 +60,19 @@ class BaseWidget extends React.Component {
 
   componentDidMount(){
     this.setState({confetti:true})
-    if(this.props.canvasInEditMode) this.initDraggable();
-    else this.removeDraggable;
+    if(this.props.canvasInEditMode) this.initDraggable()
+    else this.removeDraggable
   }
 
   componentDidUpdate(prevProps, prevState){
     if(this.props.canvasInEditMode !== prevProps.canvasInEditMode){
-      if(this.props.canvasInEditMode) this.initDraggable();
+      if(this.props.canvasInEditMode) this.initDraggable()
       else this.removeDraggable();
     }
   }
 
   initDraggable(){
-    let draggableElement = this.domRef;
+    let draggableElement = this.domRef
 
     this.interObj = Interact(draggableElement).draggable({
       //allowFrom: '.drag-handle',
@@ -90,51 +90,51 @@ class BaseWidget extends React.Component {
   }
 
   removeDraggable(){
-    this.interObj.draggable(false);
+    this.interObj.draggable(false)
   }
 
 
   onDrag(e){
-    let placement = this.state.placement;
-    if(e.dx !== 0) placement.offsetX += e.dx;
-    if(e.dy !== 0) placement.offsetY += e.dy;
-    this.setState({placement});
+    let placement = this.state.placement
+    if(e.dx !== 0) placement.offsetX += e.dx
+    if(e.dy !== 0) placement.offsetY += e.dy
+    this.setState({placement})
   }
 
   onDragStart(){
-    this.setState({isBeingDragged:true});
+    this.setState({isBeingDragged:true})
   }
 
   onDragEnd(){
-    this.setState({isBeingDragged:false});
+    this.setState({isBeingDragged:false})
   }
 
   onSettingChange(event){
-    if(!this.state) return;
+    if(!this.state) return
     if(this.state.settings){
-      let settings = this.state.settings;
+      let settings = this.state.settings
       if(settings[event.key]){
-        settings[event.key].value = event.value;
-        this.setState({settings});
+        settings[event.key].value = event.value
+        this.setState({settings})
       }
     }
 
 
-    // console.log('value', event.value);
-    // console.log('key', event.key);
+    // console.log('value', event.value)
+    // console.log('key', event.key)
   }
 
   renderSettings(){
-    let renderedSettings = [];
+    let renderedSettings = []
     for (let key in this.state.settings) {
       let setting = this.state.settings[key]
       if(setting.options.visible){
-        let params = setting.options;
-        params.value = setting.value;
-        params.key = params.id = key;
-        params.onChange = this.onSettingChange;
+        let params = setting.options
+        params.value = setting.value
+        params.key = params.id = key
+        params.onChange = this.onSettingChange
         let newElement = React.createElement(setting.type, params, null)
-        renderedSettings.push(newElement);
+        renderedSettings.push(newElement)
       }
     }
 
@@ -149,10 +149,10 @@ class BaseWidget extends React.Component {
   }
 
   render(){
-    let mainContainerClasses = this.state.mainContainerClasses.slice();
-    if(this.state.cssWidgetPrefix) mainContainerClasses.push('--mm-' + this.state.cssWidgetPrefix);
-    if(this.state.settingsViewOpen) mainContainerClasses.push('--mm-widget-flipped');
-    if(this.state.isBeingDragged) mainContainerClasses.push('--mm-widget-isBeingDragged');
+    let mainContainerClasses = this.state.mainContainerClasses.slice()
+    if(this.state.cssWidgetPrefix) mainContainerClasses.push('--mm-' + this.state.cssWidgetPrefix)
+    if(this.state.settingsViewOpen) mainContainerClasses.push('--mm-widget-flipped')
+    if(this.state.isBeingDragged) mainContainerClasses.push('--mm-widget-isBeingDragged')
 
     let mainContainerStyle = {
       height: this.convertIntToRem(this.state.placement.height),
@@ -160,7 +160,7 @@ class BaseWidget extends React.Component {
       transform: 'translate(' + this.state.placement.offsetX  + 'px,' + this.state.placement.offsetY + 'px)'
     }
 
-    if(this.state.editMode) mainContainerClasses.push('--mm-editMode');
+    if(this.state.editMode) mainContainerClasses.push('--mm-editMode')
 
     let widgetName = this.state.widgetName
 
@@ -172,7 +172,7 @@ class BaseWidget extends React.Component {
       decay: 0.75
     }
 
-    let confetti;
+    let confetti
     if(this.displayConfetti) confetti = <Confetti active={ this.state.confetti } config={confettiConfig}/>
 
     return (
@@ -199,7 +199,6 @@ class BaseWidget extends React.Component {
         <button onClick={this.toggleSettings} className='--mm-widget-settingsButton --mm-visible'></button>
         <button onClick={this.remove} className='--mm-widget-deleteButton --mm-visible'></button>
 
-
       </div>
     )
   }
@@ -207,4 +206,4 @@ class BaseWidget extends React.Component {
 }
 
 
-export default BaseWidget;
+export default BaseWidget

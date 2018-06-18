@@ -4,22 +4,22 @@ import './Setting.css'
 
 class Setting extends React.Component {
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
       dirtyValue: this.props.value
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
+    this.handleChange = this.handleChange.bind(this)
+    this.handleBlur = this.handleBlur.bind(this)
   }
 
   handleChange(event){
-    this.setState({dirtyValue: event.target.value});
+    this.setState({dirtyValue: event.target.value})
 
     let args = {
       value:event.target.value,
       key:this.props.id
     }
-    if(this.props.onChange) this.props.onChange(args);
+    if(this.props.onChange) this.props.onChange(args)
   }
 
   handleBlur(event){
@@ -32,18 +32,18 @@ class Setting extends React.Component {
   }
 
   renderInput(){
-    let result = '';
+    let result = ''
     switch (this.props.type) {
       case 'text':
         result = (<input type='text' placeholder={this.props.label} onChange={this.handleChange} onBlur={this.handleBlur} value={this.state.dirtyValue}></input>)
-        break;
+        break
       case 'toggle':
         result = (<button>{this.state.dirtyValue}</button>)
-        break;
+        break
       default:
 
     }
-    return result;
+    return result
   }
 
   renderAnnotation(){
@@ -67,4 +67,4 @@ class Setting extends React.Component {
 
 }
 
-export default Setting;
+export default Setting

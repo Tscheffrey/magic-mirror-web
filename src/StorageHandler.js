@@ -1,4 +1,4 @@
-let instance;
+let instance
 
 class StorageHandler {
 
@@ -7,7 +7,7 @@ class StorageHandler {
       if(instance) instance = this
       else this.init()
 
-      return instance;
+      return instance
     }
 
   init(){
@@ -32,13 +32,13 @@ class StorageHandler {
   }
 
   getProperty(name){
-    if(!name) return this.getAllProps();
+    if(!name) return this.getAllProps()
     if(this.internalStorage.hasOwnProperty(name)) return this.internalStorage[name]
-    else return null;
+    else return null
   }
 
   getAllProps(){
-    return this.internalStorage;
+    return this.internalStorage
   }
 
   async saveToLocalstorage(name,value){
@@ -50,7 +50,7 @@ class StorageHandler {
 }
 
 
-let storageHandlerObject = new StorageHandler();
+let storageHandlerObject = new StorageHandler()
 
 
-export default storageHandlerObject;
+export default storageHandlerObject

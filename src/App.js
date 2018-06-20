@@ -10,6 +10,7 @@ import MagicMirror from './MagicMirror'
 //console.log(storageHandler.getProperty('test2'))
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">

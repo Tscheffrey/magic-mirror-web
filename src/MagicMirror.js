@@ -3,6 +3,8 @@ import './MagicMirror.css'
 
 import Shortid from 'shortid'
 
+import './speech'
+
 import BaseWidget from './widget/BaseWidget'
 import WeatherWidget from './widget/WeatherWidget'
 import ClockWidget from './widget/ClockWidget'

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "annyang": "^2.6.1",
     "html-react-parser": "^0.4.2",
     "interactjs": "^1.3.3",
     "moment": "^2.20.1",

@@ -10,7 +10,7 @@ import icon from '../img/weather-widget-logo.svg'
 class WeatherWidget extends BaseWidget {
   constructor(props){
     super(props)
-    this.state.url = 'http://api.openweathermap.org/data/2.5/weather'
+    this.state.url = 'https://api.openweathermap.org/data/2.5/weather'
     this.state.mainContainerClasses.push('--mm-weather-widget')
     this.state.placement.width = 30
     this.state.placement.height = 20

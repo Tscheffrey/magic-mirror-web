@@ -12,7 +12,7 @@ class WeatherChart extends BaseWidget {
   constructor(props){
     super(props)
 
-    this.state.url = 'http://api.openweathermap.org/data/2.5/forecast/daily'
+    this.state.url = 'https://api.openweathermap.org/data/2.5/forecast/daily'
     this.state.mainContainerClasses.push('--mm-weather-chart')
     this.state.placement.width = 60
     this.state.placement.height = 40

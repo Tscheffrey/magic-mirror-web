@@ -2,6 +2,8 @@
 
 This is an attempt to create a web-based application to be used as a basis for a Magic Mirror type thing. Its main porpose is to **display useful data** like weather data, time, news (or similar information) to a user in his home.
 
+[Try it!](https://magic-mirror.netlify.com/)
+
 >  **Disclaimer**   
 > This project still is in a very early state, so structural changes might occur on a large scale.
 

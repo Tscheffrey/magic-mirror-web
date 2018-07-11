@@ -8,8 +8,8 @@
 	transition: outline 200ms ease;
 	perspective: 50rem;
 	/* box-shadow: 0 0 5rem 1rem rgba(black, 0); */
-	> .--mm-widget-front,
-	> .--mm-widget-back {
+	 .--mm-widget-front,
+	 .--mm-widget-back {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -20,13 +20,13 @@
 		// padding: 0.5rem;
 		box-sizing: border-box;
 	}
-	> .--mm-widget-front {
+	 .--mm-widget-front {
 		z-index: 2;
 		transform: rotateY(0deg);
 		overflow: hidden;
 		/* background: red; */
 	}
-	> .--mm-widget-back {
+	 .--mm-widget-back {
 		z-index: 3;
 		transform: rotateY(180deg);
 		//background: #121212;

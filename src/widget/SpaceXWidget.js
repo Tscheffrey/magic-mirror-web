@@ -14,7 +14,6 @@ import Config from '../Config'
 class SpaceXWidget extends BaseWidget {
   constructor(props){
     super(props)
-    this.state.url = 'http://api.openweathermap.org/data/2.5/weather'
     this.state.mainContainerClasses.push('spacex-widget')
     this.state.placement.width = 35
     this.state.placement.height = 50

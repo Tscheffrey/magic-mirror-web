@@ -1,8 +1,8 @@
 # Web-Based Magic Mirror
 
-This is an attempt to create a web-based application to be used as a basis for a Magic Mirror type thing. Its main porpose is to **display useful data** like weather data, time, news (or similar information) to a user in his home.
-
 [Try it!](https://magic-mirror.netlify.com/)
+
+This is an attempt to create a web-based application to be used as a basis for a Magic Mirror type thing. Its main porpose is to **display useful data** like weather data, time, news (or similar information) to a user in his home.
 
 >  **Disclaimer**   
 > This project still is in a very early state, so structural changes might occur on a large scale.
@@ -135,6 +135,7 @@ In Edit Mode, widgets can be added by clicking one of the Icons in the *WidgetSt
 
 ## Upcoming changes
 
+- [ ] add Redux for proper data structures
 - [ ] store widget settings and position data in the browser and restore it at reload
 - [ ] enable resizing for Widgets
 - [ ] add more types of settings

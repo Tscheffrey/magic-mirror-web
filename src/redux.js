@@ -32,7 +32,7 @@ const initialState = {
   ]
 }
 
-export const todo = (state = initialState, action) => {
+export const widget = (state = initialState, action) => {
   switch (action.type) {
     // case 'ADD_TODO':
     //   let newTodo = {text: action.todo.text}
@@ -56,7 +56,7 @@ export const todo = (state = initialState, action) => {
 };
 
 export const reducers = combineReducers({
-  todo,
+  widget,
 })
 
 // store.js

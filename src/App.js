@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import storageHandler from './StorageHandler'
-//import './App.css'
+
+import { Provider } from 'react-redux'
+import { store } from './redux'
 
 import MagicMirror from './MagicMirror'
 
@@ -12,9 +14,9 @@ import MagicMirror from './MagicMirror'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Provider store={store}>
         <MagicMirror />
-      </div>
+      </Provider>
     );
   }
 }

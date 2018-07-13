@@ -4,32 +4,32 @@ import Shortid from 'shortid'
 import { applyMiddleware, combineReducers, createStore } from 'redux'
 
 // actions.js
-export const addWidget = todo => ({
+export const addWidget = widget => ({
   type: 'ADD_WIDGET',
-  todo,
+  widget,
 })
 
-// export const removeTodo = todo => ({
-//   type: 'REMOVE_TODO',
-//   todo,
-// })
-
-export const removeWidget = todo => ({
+export const removeWidget = widget => ({
   type: 'REMOVE_WIDGET',
-  todo,
+  widget,
+})
+
+export const moveWidget = widget => ({
+  type: 'MOVE_WIDGET',
+  widget,
 })
 
 // reducers.js
 
 const initialState = {
-    widget: {}
-    // 'rJewgTUQGX' : {
-    //   text: 'this is the first TODO'
-    // },
-    // 'JewgTUQG2' : {
-    //   text : 'this is a second todo'
-    // }
-
+    widget: [
+    'H1S_s4Lmm' : {
+      text: 'this is just some dummy content'
+    },
+    'B1x_sNLm7' : {
+      text : 'this is just some dummy content (2)'
+    }
+  ]
 }
 
 export const todo = (state = initialState, action) => {

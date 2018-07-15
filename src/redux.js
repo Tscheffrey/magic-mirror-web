@@ -23,22 +23,22 @@ export const moveWidget = widget => ({
 
 const initialState = {
     widget: [
-    'H1S_s4Lmm' : {
-      text: 'this is just some dummy content'
-    },
-    'B1x_sNLm7' : {
-      text : 'this is just some dummy content (2)'
-    }
+    // 'H1S_s4Lmm' : {
+    //   content: 'this is just some dummy content'
+    // },
+    // 'B1x_sNLm7' : {
+    //   content : 'this is just some dummy content (2)'
+    // }
   ]
 }
 
 export const widget = (state = initialState, action) => {
   switch (action.type) {
-    // case 'ADD_TODO':
-    //   let newTodo = {text: action.todo.text}
-    //   let newState = Object.assign({}, state)
-    //   newState.todo[Shortid.generate()] = newTodo
-    //   return newState;
+    case 'ADD_WIDGET':
+      let newWidget = {type: action.widget}
+      let newState = Object.assign({}, state)
+      newState.widget[Shortid.generate()] = newWidget
+      return newState
     //
     // case 'REMOVE_TODO':
     //   let newState2 = Object.assign({}, state)

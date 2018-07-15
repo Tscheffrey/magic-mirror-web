@@ -12,7 +12,7 @@ import {
 } from './redux';
 
 const mapStateToProps = (state, ownProps) => ({
-  widget: widgetSelector(state.widget),
+  widgets: widgetSelector(state.widget),
 });
 
 const mapDispatchToProps = {

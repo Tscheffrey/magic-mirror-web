@@ -21,23 +21,14 @@ export const moveWidget = widget => ({
 
 // reducers.js
 
-const initialState = {
-    widget: [
-    // 'H1S_s4Lmm' : {
-    //   content: 'this is just some dummy content'
-    // },
-    // 'B1x_sNLm7' : {
-    //   content : 'this is just some dummy content (2)'
-    // }
-  ]
-}
+const initialState = {widgets:[]}
 
 export const widget = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_WIDGET':
       let newWidget = {type: action.widget}
       let newState = Object.assign({}, state)
-      newState.widget[Shortid.generate()] = newWidget
+      newState.widgets[Shortid.generate()] = newWidget
       return newState
     //
     // case 'REMOVE_TODO':
@@ -76,5 +67,5 @@ export const widgetSelector = (state) => {
   //   todos.push(Object.assign({}, state.todo[todoId], {id: todoId}))
   // }
   // return todos
-  return state.widget
+  return state.widgets
 }

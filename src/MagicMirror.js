@@ -37,6 +37,7 @@ class MagicMirror extends React.Component {
     this.onMouseMove = this.onMouseMove.bind(this)
     this.onMouseStandingStill = this.onMouseStandingStill.bind(this)
     this.initializeWigets()
+    debugger;
   }
 
   componentDidMount(){

@@ -21,7 +21,7 @@ export const moveWidget = widget => ({
 
 // reducers.js
 
-const initialState = {widgets:[]}
+const initialState = {widgets:{}}
 
 export const widget = (state = initialState, action) => {
   switch (action.type) {

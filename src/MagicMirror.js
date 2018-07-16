@@ -158,9 +158,9 @@ class MagicMirror extends React.Component {
 
   renderWidgets(){
     let renderedWidgets = []
-    for (let i in this.state.widgets) {
-      let widget = this.state.widgets[i]
-      let props = widget.props
+    for (let i in this.props.widgets) {
+      let widget = this.props.widgets[i]
+      let props = {} //widget.props
       props.key = props.id = i
       props.canvasInEditMode = this.state.editMode
       props.onRemove = this.removeWidget

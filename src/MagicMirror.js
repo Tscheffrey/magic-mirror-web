@@ -107,6 +107,9 @@ class MagicMirror extends React.Component {
   }
 
   removeWidget(widgetId){
+    // redux
+    this.props.removeWidget({id:widgetId})
+
     let newWidgetList = this.state.widgets
     delete newWidgetList[widgetId]
     this.setState(
@@ -116,7 +119,8 @@ class MagicMirror extends React.Component {
   }
 
   addWidgetFromStore(widgetType){
-    this.props.addWidget(widgetType)
+    // redux
+    this.props.addWidget({type:widgetType})
 
     if(widgetType) {
       this.addWidget({

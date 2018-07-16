@@ -26,16 +26,16 @@ const initialState = {widgets:{}}
 export const widget = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_WIDGET':
-      let newWidget = {type: action.widget}
+      let newWidget = {type: action.widget.type}
       let newState = Object.assign({}, state)
       newState.widgets[Shortid.generate()] = newWidget
       return newState
-    //
-    // case 'REMOVE_TODO':
-    //   let newState2 = Object.assign({}, state)
-    //   delete newState2.todo[action.todo.id]
-    //   return newState2
-    //
+
+    case 'REMOVE_WIDGET':
+      let newState2 = Object.assign({}, state)
+      delete newState2.widgets[action.widget.id]
+      return newState2
+
     // case 'TOGGLE_TODO':
     //   let newState3 = Object.assign({}, state)
     //   newState3.todo[action.todo.id].done = !!!newState3.todo[action.todo.id].done

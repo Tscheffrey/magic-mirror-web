@@ -1,5 +1,5 @@
 {
-  "name": "Magic Mirror",
+  "name": "magic-mirror-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -27,5 +27,13 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "guppy": {
+    "id": "magic-mirror-web",
+    "name": "Magic Mirror",
+    "type": "create-react-app",
+    "color": "#121212",
+    "icon": null,
+    "createdAt": 1531981737367
   }
 }

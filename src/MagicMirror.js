@@ -107,6 +107,9 @@ class MagicMirror extends React.Component {
   }
 
   removeWidget(widgetId){
+    // redux
+    this.props.removeWidget({id:widgetId})
+
     let newWidgetList = this.state.widgets
     delete newWidgetList[widgetId]
     this.setState(
@@ -116,6 +119,9 @@ class MagicMirror extends React.Component {
   }
 
   addWidgetFromStore(widgetType){
+    // redux
+    this.props.addWidget({type:widgetType})
+
     if(widgetType) {
       this.addWidget({
       type: widgetType,
@@ -152,13 +158,13 @@ class MagicMirror extends React.Component {
 
   renderWidgets(){
     let renderedWidgets = []
-    for (let i in this.state.widgets) {
-      let widget = this.state.widgets[i]
-      let props = widget.props
+    for (let i in this.props.widgets) {
+      let widget = this.props.widgets[i]
+      let props = {} //widget.props
       props.key = props.id = i
       props.canvasInEditMode = this.state.editMode
       props.onRemove = this.removeWidget
-      let element = React.createElement(widget.type,props,null)
+      let element = React.createElement(widget.type, props, null)
       renderedWidgets.push(element)
     }
 

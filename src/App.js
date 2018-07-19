@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import storageHandler from './StorageHandler'
-//import './App.css'
 
-import MagicMirror from './MagicMirror'
+import { Provider } from 'react-redux'
+import { store } from './redux'
+
+import MagicMirrorContainer from './MagicMirrorContainer'
 
 // storageHandler.setProperty('Marius', 'Snitch')
 //storageHandler.setProperty('test2', {test:'boom', foo:'bar'})
@@ -12,9 +14,9 @@ import MagicMirror from './MagicMirror'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <MagicMirror />
-      </div>
+      <Provider store={store}>
+        <MagicMirrorContainer />
+      </Provider>
     );
   }
 }

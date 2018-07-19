@@ -11,8 +11,10 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-dom-confetti": "0.0.10",
+    "react-redux": "^5.0.7",
     "react-scripts": "^1.1.4",
     "recharts": "^1.0.0-beta.10",
+    "redux": "^4.0.0",
     "shortid": "^2.2.8",
     "url-assembler": "^1.2.10"
   },

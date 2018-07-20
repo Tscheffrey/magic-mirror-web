@@ -1,7 +1,9 @@
 import Shortid from 'shortid'
-
-
 import { applyMiddleware, combineReducers, createStore } from 'redux'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+
+
 
 // actions.js
 export const addWidget = widget => ({
@@ -26,7 +28,7 @@ const initialState = {widgets:{}}
 export const widget = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_WIDGET':
-      let newWidget = {type: action.widget.type}
+      let newWidget = {type: action.widget.type, typeString: 'test'}
       let newState = Object.assign({}, state)
       newState.widgets[Shortid.generate()] = newWidget
       return newState
@@ -46,8 +48,15 @@ export const widget = (state = initialState, action) => {
 };
 
 export const reducers = combineReducers({
-  widget,
-})
+                          widget,
+                        })
+
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, reducers)
 
 // store.js
 export function configureStore(initialState = {}) {
@@ -55,7 +64,10 @@ export function configureStore(initialState = {}) {
   return store
 }
 
-export const store = configureStore();
+export const store = configureStore()
+
+// export const store = createStore(persistedReducer)
+// export const persistor = persistStore(store)
 
 
 // Selectors

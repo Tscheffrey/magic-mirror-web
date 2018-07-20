@@ -12,6 +12,8 @@ import SpaceXWidget from './widget/SpaceXWidget'
 
 import storageHandler from './StorageHandler'
 import WidgetStore from './WidgetStore'
+import WidgetHelper from './WidgetHelper'
+
 
 class MagicMirror extends React.Component {
   constructor(props){
@@ -40,7 +42,7 @@ class MagicMirror extends React.Component {
   }
 
   componentDidMount(){
-
+    console.log(WidgetHelper.all());
   }
 
   initializeWigets(){

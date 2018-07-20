@@ -36,10 +36,9 @@ export const widget = (state = initialState, action) => {
       delete newState2.widgets[action.widget.id]
       return newState2
 
-    // case 'TOGGLE_TODO':
-    //   let newState3 = Object.assign({}, state)
-    //   newState3.todo[action.todo.id].done = !!!newState3.todo[action.todo.id].done
-    //   return newState3
+    case 'MOVE_WIDGET':
+      let newState3 = Object.assign({}, state)
+      return newState3
 
     default:
       return state
